@@ -14,3 +14,4 @@ jobs:
         password: ${{ secrets.PASS }}
         localDir: "/"
         remoteDir: "/pruebas-deploy"
+        strip_components: 1
