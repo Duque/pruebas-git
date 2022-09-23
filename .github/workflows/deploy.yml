@@ -1,23 +1,17 @@
-name: Deploy
-
-on: [push]
-
+name: Deploy via ftp
+on: push
 jobs:
   deploy:
-
-  build:
-    name: Build
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: scp-deployer
-      uses: actions/checkout@v2    
-    - name: Upload Files
-      uses: siva1024/scp-deployer@v1.0
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
+    - uses: actions/checkout@v2
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
       with:
-        source: "site/*"
-        target: "/www/pruebas-deploy"
-        strip_components: 1
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.PASS }}
+        localDir: ""
+        remoteDir: "www/pruebas-deploy"
+        options: "--delete --asci"
