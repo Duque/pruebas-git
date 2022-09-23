@@ -10,7 +10,7 @@ jobs:
       uses: sebastianpopp/ftp-action@releases/v2
       with:
         host: ${{ secrets.HOST }}
-        user: ${{ secrets.FTP_USERNAME }}
+        user: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASS }}
         localDir: "/"
         remoteDir: "/www/pruebas-deploy"
