@@ -15,7 +15,6 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
       with:
         source: "site/*"
         target: "/www/pruebas-deploy"
