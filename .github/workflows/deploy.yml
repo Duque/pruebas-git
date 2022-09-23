@@ -12,6 +12,6 @@ jobs:
         host: ${{ secrets.HOST }}
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.PASS }}
-        localDir: ""
+        localDir: "/"
         remoteDir: "/www/pruebas-deploy"
         options: "--delete --asci"
