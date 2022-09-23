@@ -13,5 +13,5 @@ jobs:
         user: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASS }}
         localDir: "/"
-        remoteDir: "/www/pruebas-deploy" 
+        remoteDir: "/pruebas-deploy" 
         
