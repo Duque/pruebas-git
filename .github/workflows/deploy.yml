@@ -12,5 +12,5 @@ jobs:
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASS }}
-        remoteDir: "./pruebas-deploy2"
+        remoteDir: "./www/pruebas-deploy2"
         options: "--delete --asci"
