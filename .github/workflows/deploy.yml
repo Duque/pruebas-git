@@ -5,6 +5,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@v2.0.0
       with:
@@ -12,5 +13,5 @@ jobs:
         user: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASS }}
         localDir: ""
-        remoteDir: "/pruebas-deploy"
+        remoteDir: "/pruebas-deploy2"
         options: "--delete --asci"
