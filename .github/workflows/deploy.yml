@@ -5,13 +5,13 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: ftp-action
+    - uses: actions/checkout@v2
+    - name: Upload ftp
       uses: sebastianpopp/ftp-action@v2.0.0
       with:
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASS }}
-        localDir: "/"
+        localDir: ""
         remoteDir: "/pruebas-deploy"
-        strip_components: 1
+        options: "--delete --asci"
